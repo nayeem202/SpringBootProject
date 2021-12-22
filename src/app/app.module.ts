@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { LoginComponent } from './components2/login/login.component';
 import { SignupComponent } from './components2/signup/signup.component';
+import { AdminLayoutComponent } from './components2/admin-layout/admin-layout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SignupComponent } from './components2/signup/signup.component';
     LayoutComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AdminLayoutComponent
   ],
   imports: [
     BrowserModule,
