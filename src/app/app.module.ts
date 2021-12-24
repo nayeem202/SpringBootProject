@@ -12,6 +12,16 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { LoginComponent } from './components2/login/login.component';
 import { SignupComponent } from './components2/signup/signup.component';
 import { AdminLayoutComponent } from './components2/admin-layout/admin-layout.component';
+import { AdHeaderComponent } from './components2/admin-layout/ad-header/ad-header.component';
+import { AdFooterComponent } from './components2/admin-layout/ad-footer/ad-footer.component';
+import { AdminHomeComponent } from './components2/admin-home/admin-home.component';
+import { DashboardComponent } from './components2/admin-layout/admin/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AdvertiseComponent } from './components2/advertise/advertise.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +32,24 @@ import { AdminLayoutComponent } from './components2/admin-layout/admin-layout.co
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    AdHeaderComponent,
+    AdFooterComponent,
+    AdminHomeComponent,
+    DashboardComponent,
+    AdvertiseComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
