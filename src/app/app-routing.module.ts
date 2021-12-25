@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AdminHomeComponent } from './components2/admin-home/admin-home.component';
 import { AdminLayoutComponent } from './components2/admin-layout/admin-layout.component';
+import { AdvertiseComponent } from './components2/advertise/advertise.component';
 import { AuthGuard } from './components2/auth.guard';
 import { LoginComponent } from './components2/login/login.component';
 import { SignupComponent } from './components2/signup/signup.component';
@@ -21,8 +22,13 @@ const routes: Routes = [
 
 
   {path: 'admin', component: AdminLayoutComponent, canActivateChild: [AuthGuard], children: [
-    {path: '', component: AdminHomeComponent}
-  ]}
+    {path: '', component: AdminHomeComponent},
+    {path: 'advertise', component: AdvertiseComponent}
+    
+  ]},
+
+  
+  
 
 
 
