@@ -4,20 +4,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.Session;
+
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.model.Status;
+
 import com.example.model.UserModel;
 import com.example.repository.UserService;
 
@@ -76,6 +78,15 @@ public class LoginController {
 		
 	}
 	
+	
+	
+	
+	
+	
+	@DeleteMapping("/deleteUser/{id}")
+	private void delete(@PathVariable int id) {
+		userService.deleteById( (long) id);
+	}
 	
 	
 	

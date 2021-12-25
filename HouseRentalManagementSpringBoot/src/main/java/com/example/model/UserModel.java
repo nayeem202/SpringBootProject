@@ -1,9 +1,14 @@
 package com.example.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +22,19 @@ public class UserModel {
     private String email;
     private String password;
     
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="admin_fk", referencedColumnName = "id")
+    private List<AdvertisingForm> newAdd;
+    
+    
+    
+	public List<AdvertisingForm> getNewAdd() {
+		return newAdd;
+	}
+	public void setNewAdd(List<AdvertisingForm> newAdd) {
+		this.newAdd = newAdd;
+	}
 	public long getId() {
 		return id;
 	}
